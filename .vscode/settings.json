@@ -1,0 +1,11 @@
+{
+    "cortex-debug.gdbPath": "gdb-multiarch", 
+    "makefile.extensionOutputFolder": "./.vscode",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/dima/STM32/STM32G0/build",
+            "binaryPath": "/home/dima/STM32/STM32G0/build/STM32G0.elf",
+            "binaryArgs": []
+        }
+    ]
+}
