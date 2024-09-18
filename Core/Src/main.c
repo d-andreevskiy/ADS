@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "mb.h"
 
 /* USER CODE END Includes */
 
@@ -31,7 +32,36 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define REG_INPUT_START 1000
+#define REG_INPUT_NREGS 12
 
+#define I2C_ADDRESS_1115    0x4A //1115
+#define I2C_ADDRESS_1115_1  0x4B //1115
+#define I2C_ADDRESS_1110    0x48 //1110
+#define I2C_ADDRESS_1110_1  0x49 //1110
+
+//Define 1-shot read or continuous
+#define ONESHOT_ON  0b10000001
+#define ONESHOT_OFF 0
+
+//Define Analog Inputs
+#define AI0 0b01000000 //  AINP = AIN0 and AINN = GND
+#define AI1 0b01010000 //  AINP = AIN1 and AINN = GND
+#define AI2 0b01100000 //  AINP = AIN2 and AINN = GND
+#define AI3 0b01110000 //  AINP = AIN3 and AINN = GND
+
+//Define gain setting
+#define GAIN1 0b00000000  //Full Scale Voltage is: 6.144 + or -
+#define GAIN2 0b00000010  //FS 4.096
+#define GAIN3 0b00000100  //FS 2.048
+#define GAIN4 0b00000110  //FS 1.024
+#define GAIN5 0b00001000  //FS  .512
+#define GAIN6 0b00001010  //FS  .256
+#define GAIN7 0b00001100  //FS  .256
+#define GAIN8 0b00001110  //FS  .256
+
+#define I2C_ID_ADDRESS                                           0xD0
+#define I2C_TIMEOUT                                              50
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -42,10 +72,16 @@
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c2;
 
+TIM_HandleTypeDef htim14;
+
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+static USHORT usRegInputStart = REG_INPUT_START;
+static USHORT usRegInputBuf[REG_INPUT_NREGS] ;
 
+uint8_t i2c_1115[2] = {I2C_ADDRESS_1115, I2C_ADDRESS_1115_1};
+uint8_t i2c_1110[2] = {I2C_ADDRESS_1110, I2C_ADDRESS_1110_1};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -53,12 +89,84 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_TIM14_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+static uint32_t lock_nesting_count = 0;
+void __critical_enter(void)
+{
+    __disable_irq();
+    ++lock_nesting_count;
+}
+void __critical_exit(void)
+{
+    /* Unlock interrupts only when we are exiting the outermost nested call. */
+    --lock_nesting_count;
+    if (lock_nesting_count == 0) {
+        __enable_irq();
+    }
+}
+
+typedef enum  {
+  SEND_CONFIG,
+  WAIT_MEAS, 
+  SWITCH_REG,
+  READ_MEAS
+} state_t;
+
+uint8_t ai_arr[4] = {AI0, AI1, AI2, AI3}; 
+static uint8_t ai = 0;
+
+
+void readI2CRegs()
+{
+    static state_t state = SEND_CONFIG;
+    uint8_t writeBuf[3] = {1, ONESHOT_ON + GAIN1, 0b11100000} ;
+    writeBuf[1] = ONESHOT_ON + GAIN1 + ai_arr[ai]; 
+    uint8_t writeBuf_110[2] = {1, 0b10000000} ;
+
+    switch (state)
+    {
+    case SEND_CONFIG:
+
+      for (int i = 0; i < 2; i++) {
+        if (ai == 0)
+          HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[i] << 1), writeBuf_110, 2,  I2C_TIMEOUT);
+        HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 3,  I2C_TIMEOUT);
+      }
+
+      state++;
+      break;
+
+    case WAIT_MEAS:
+      for (int i = 0; i < 2; i++) {
+        do{
+          HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), writeBuf, 2,  I2C_TIMEOUT);
+        } while ((writeBuf[0] & 0x80) == 0);
+      }
+
+      writeBuf[0] = 0;
+      for (int i = 0; i < 2; i++)
+      HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
+
+      for (int i=0; i < 2; i++)
+        HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), usRegInputBuf + i*4 + ai, 2,  I2C_TIMEOUT);
+      state = SEND_CONFIG;
+      ai ++;
+      if (ai > 3) {
+        ai = 0;
+        HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[0] << 1), usRegInputBuf + 8, 2,  I2C_TIMEOUT);
+        HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[1] << 1), usRegInputBuf + 9, 2,  I2C_TIMEOUT);
+
+      }
+    }
+
+} 
 
 /* USER CODE END 0 */
 
@@ -93,6 +201,7 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C2_Init();
   MX_USART1_UART_Init();
+  MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
   uint8_t MSG[35] = {'\0'};
   char* MSG_1115_ERR="1115 transmit err\r\n";
@@ -102,13 +211,17 @@ int main(void)
 
   uint8_t X = 0;
   
-#define I2C_ADDRESS_1115                                              0x4A //1115
-#define I2C_ADDRESS_1115_1                                              0x4B //1115
-#define I2C_ADDRESS_1110                                              0x48 //1110
-#define I2C_ADDRESS_1110_1                                              0x49 //1110
-
-#define I2C_ID_ADDRESS                                           0xD0
-#define I2C_TIMEOUT                                              50
+MT_PORT_SetTimerModule(&htim14);
+MT_PORT_SetUartModule(&huart1);
+eMBErrorCode eStatus;
+eStatus = eMBInit(MB_RTU, 1, 0, 115200, MB_PAR_NONE);
+eStatus = eMBEnable();
+memset (&usRegInputBuf,0, sizeof(usRegInputBuf));
+if (eStatus != MB_ENOERR)
+{
+// Error handling
+  
+}
 
   /* USER CODE END 2 */
 
@@ -120,41 +233,10 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-    uint8_t bytes[3]={0,0,0};
-
-    for (uint8_t i = 0; i < 0x4; i ++ ) {
-      bytes[0] = i;
-      HAL_I2C_Master_Transmit(&hi2c2, (I2C_ADDRESS_1115_1 << 1), bytes, 1,  I2C_TIMEOUT);
-      if (HAL_I2C_Master_Receive(&hi2c2, (I2C_ADDRESS_1115_1 << 1), bytes, 2,  I2C_TIMEOUT) != HAL_OK)
-        HAL_UART_Transmit (&huart1, MSG_1115_ERR, strlen(MSG_1115_ERR),100);
-      else {
-        HAL_UART_Transmit (&huart1, MSG_1115_OK, strlen(MSG_1115_OK), 100);
-        sprintf(MSG, "n = %d  %x %x \r\n", X, bytes[0], bytes[1]);
-         HAL_UART_Transmit(&huart1, MSG, strlen(MSG), 100);
-      }
-      
-
-    }
-
-    bytes[0] = 0;
-    bytes[1] = 0;
-    bytes[2] = 0;
-
-    if (HAL_I2C_Master_Receive(&hi2c2, (I2C_ADDRESS_1110 << 1), bytes, 3,  I2C_TIMEOUT) != HAL_OK)
-      HAL_UART_Transmit (&huart1, MSG_1110_ERR, strlen(MSG_1110_ERR),100);
-    else {
-      HAL_UART_Transmit (&huart1, MSG_1110_OK, strlen(MSG_1110_OK), 100);
-      bytes[2] = bytes[2] | 0x80;
-      HAL_I2C_Master_Transmit(&hi2c2, (I2C_ADDRESS_1110 << 1), &bytes[2], 1 , I2C_TIMEOUT); 
-      sprintf(MSG, "n = %d  %x %x %x\r\n", X, bytes[0], bytes[1], bytes[2]);
-      HAL_UART_Transmit(&huart1, MSG, strlen(MSG), 100);
-      
-    }
-
-    HAL_Delay(1000);
-    X++;
-
-
+    readI2CRegs();
+    usRegInputBuf[REG_INPUT_NREGS - 2] =  HAL_GetTick() / 1000;
+    usRegInputBuf[REG_INPUT_NREGS - 1] =  HAL_GetTick();
+    eMBPoll();
 
   }
   /* USER CODE END 3 */
@@ -249,6 +331,37 @@ static void MX_I2C2_Init(void)
 }
 
 /**
+  * @brief TIM14 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM14_Init(void)
+{
+
+  /* USER CODE BEGIN TIM14_Init 0 */
+
+  /* USER CODE END TIM14_Init 0 */
+
+  /* USER CODE BEGIN TIM14_Init 1 */
+
+  /* USER CODE END TIM14_Init 1 */
+  htim14.Instance = TIM14;
+  htim14.Init.Prescaler = 0;
+  htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim14.Init.Period = 399;
+  htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim14.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM14_Init 2 */
+
+  /* USER CODE END TIM14_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -303,6 +416,7 @@ static void MX_USART1_UART_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 /* USER CODE BEGIN MX_GPIO_Init_1 */
 /* USER CODE END MX_GPIO_Init_1 */
 
@@ -310,12 +424,61 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(TEST_GPIO_Port, TEST_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : TEST_Pin */
+  GPIO_InitStruct.Pin = TEST_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(TEST_GPIO_Port, &GPIO_InitStruct);
+
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-
+eMBErrorCode eMBRegInputCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs)
+{
+  eMBErrorCode eStatus = MB_ENOERR;
+  int iRegIndex;
+  if ((usAddress >= REG_INPUT_START) &&
+      (usAddress + usNRegs <= REG_INPUT_START + REG_INPUT_NREGS))
+  {
+    iRegIndex = (int)(usAddress - usRegInputStart);
+    while(usNRegs > 0)
+    {
+        *pucRegBuffer++ = (unsigned char)(usRegInputBuf[iRegIndex] >> 8);
+        *pucRegBuffer++ = (unsigned char)(usRegInputBuf[iRegIndex] & 0xFF);
+        iRegIndex++;
+        usNRegs--;
+    }
+  }
+  else
+  {
+    eStatus = MB_ENOREG;
+  }
+  return eStatus;
+}
+/*----------------------------------------------------------------------------*/
+eMBErrorCode eMBRegHoldingCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
+                             eMBRegisterMode eMode)
+{
+  return MB_ENOREG;
+}
+/*----------------------------------------------------------------------------*/
+eMBErrorCode eMBRegCoilsCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNCoils,
+                           eMBRegisterMode eMode)
+{
+  return MB_ENOREG;
+}
+/*----------------------------------------------------------------------------*/
+eMBErrorCode eMBRegDiscreteCB(UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNDiscrete)
+{
+  return MB_ENOREG;
+}
+/*----------------------------------------------------------------------------*/
 /* USER CODE END 4 */
 
 /**

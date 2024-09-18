@@ -7,5 +7,12 @@
             "binaryPath": "/home/dima/STM32/STM32G0/build/STM32G0.elf",
             "binaryArgs": []
         }
-    ]
+    ],
+    "files.associations": {
+        "stm32g0xx_hal.h": "c",
+        "port.h": "c",
+        "mbconfig.h": "c",
+        "mbport.h": "c",
+        "mbproto.h": "c"
+    }
 }
