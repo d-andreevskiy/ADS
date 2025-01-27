@@ -33,7 +33,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define REG_INPUT_START 1000
-#define REG_INPUT_NREGS 12
+#define REG_INPUT_NREGS 13
 
 #define I2C_ADDRESS_1115    0x4A //1115
 #define I2C_ADDRESS_1115_1  0x4B //1115
@@ -158,12 +158,20 @@ void readI2CRegs()
       HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
 
       for (int i=0; i < 2; i++)
-        HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), usRegInputBuf + i*4 + ai, 2,  I2C_TIMEOUT);
+        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), usRegInputBuf + i*4 + ai, 2,  I2C_TIMEOUT) == HAL_OK)
+          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << i;
+        else
+          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << i);
+
       state = SEND_CONFIG;
       ai ++;
       if (ai > 3) {
         ai = 0;
-        HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[0] << 1), usRegInputBuf + 8, 2,  I2C_TIMEOUT);
+        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[0] << 1), usRegInputBuf + 8, 2,  I2C_TIMEOUT) == HAL_OK)
+          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << 2;
+        else
+          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << 3);
+
         HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[1] << 1), usRegInputBuf + 9, 2,  I2C_TIMEOUT);
 
       }
@@ -240,9 +248,8 @@ if (eStatus != MB_ENOERR)
     readI2CRegs();
     usRegInputBuf[REG_INPUT_NREGS - 2] =  HAL_GetTick() / 1000;
     usRegInputBuf[REG_INPUT_NREGS - 1] =  HAL_GetTick();
-    eMBPoll();
-    
-    HAL_IWDG_Refresh(&hiwdg);
+    if (eMBPoll() == MB_ENOERR)
+      HAL_IWDG_Refresh(&hiwdg);
 
   }
   /* USER CODE END 3 */
