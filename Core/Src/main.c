@@ -140,48 +140,51 @@ void readI2CRegs()
 
       for (int i = 0; i < 2; i++) {
         if (ai == 0) {
-          HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[i] << 1), writeBuf_110, 2,  I2C_TIMEOUT);
-          HAL_IWDG_Refresh(&hiwdg);
+          HAL_I2C_Master_Transmit(&hi2c2, (i2c_1110[i] << 1), writeBuf_110, 2,  I2C_TIMEOUT);
+          HAL_Delay(1);
         }
-        HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 3,  I2C_TIMEOUT);
-        HAL_IWDG_Refresh(&hiwdg);
+
+        #ifndef WITHOUT_115
+        if (HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 3,  I2C_TIMEOUT) == HAL_OK) 
+          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << i;
+        else
+          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << i);
+        HAL_Delay(1);
+        #endif
       }
 
       state++;
       break;
 
     case WAIT_MEAS:
-      for (int i = 0; i < 2; i++) {
-        do{
-          if ( HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), writeBuf, 2,  I2C_TIMEOUT) != HAL_OK)
-            break;
-        } while ((writeBuf[0] & 0x80) == 0);
-      }
+      if (ai < 4 ) {
+        #ifndef WITHOUT_115
+        for (int i = 0; i < 2; i++) {
+          if (usRegInputBuf[REG_INPUT_NREGS - 3] & (1 << i)) 
+            do{
+              HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), writeBuf, 2,  I2C_TIMEOUT);
+            } while ((writeBuf[0] & 0x80) == 0);
+        }
 
-      writeBuf[0] = 0;
-      for (int i = 0; i < 2; i++)
-        HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
+        writeBuf[0] = 0;
+        for (int i = 0; i < 2; i++)
+          if (usRegInputBuf[REG_INPUT_NREGS - 3] & (1 << i)) 
+            HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
 
-      for (uint8_t i=0; i < 2; i++)
-        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), (uint8_t*)(usRegInputBuf + i*4 + ai), 2,  I2C_TIMEOUT) == HAL_OK)
-          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << i;
-        else
-          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << i);
-
-      state = SEND_CONFIG;
-      ai ++;
-      if (ai > 3) {
+        for (int i=0; i < 2; i++)
+          if (usRegInputBuf[REG_INPUT_NREGS - 3] & (1 << i)) 
+            HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1),(uint8_t *) ( usRegInputBuf + i*4 + ai), 2,  I2C_TIMEOUT);
+        #endif
+        state = SEND_CONFIG;
+        ai ++; 
+      } else {
         ai = 0;
-        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[0] << 1), (uint8_t*)(usRegInputBuf + 8), 2,  I2C_TIMEOUT) == HAL_OK)
-          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << 2;
-        else
-          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << 2);
-
-        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[1] << 1), (uint8_t*)(usRegInputBuf + 9), 2,  I2C_TIMEOUT) == HAL_OK)
-          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << 2;
-        else
-          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << 2);
-
+        for (uint8_t i =0; i < 2; i++) {
+          if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[i] << 1), (uint8_t *)(usRegInputBuf + 8 + i), 2,  I2C_TIMEOUT) == HAL_OK)
+            usRegInputBuf[REG_INPUT_NREGS - 3] |= (1 << (i + 2));
+          else
+            usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << (i +2));
+        }
       }
     }
 
@@ -231,17 +234,17 @@ int main(void)
 
   uint8_t X = 0;
   
-MT_PORT_SetTimerModule(&htim14);
-MT_PORT_SetUartModule(&huart1);
-eMBErrorCode eStatus;
-eStatus = eMBInit(MB_RTU, 1, 0, 115200, MB_PAR_NONE);
-eStatus = eMBEnable();
-memset (&usRegInputBuf,0, sizeof(usRegInputBuf));
-if (eStatus != MB_ENOERR)
-{
-// Error handling
-  
-}
+  MT_PORT_SetTimerModule(&htim14);
+  MT_PORT_SetUartModule(&huart1);
+  eMBErrorCode eStatus;
+  eStatus = eMBInit(MB_RTU, 1, 0, 115200, MB_PAR_NONE);
+  eStatus = eMBEnable();
+  // memset (&usRegInputBuf,0, sizeof(usRegInputBuf));
+  if (eStatus != MB_ENOERR)
+  {
+  // Error handling
+    
+  }
 
   /* USER CODE END 2 */
 
@@ -257,6 +260,7 @@ if (eStatus != MB_ENOERR)
     usRegInputBuf[REG_INPUT_NREGS - 2] =  HAL_GetTick() / 1000;
     usRegInputBuf[REG_INPUT_NREGS - 1] =  HAL_GetTick();
     HAL_IWDG_Refresh(&hiwdg);
+    eMBPoll();
 
   }
   /* USER CODE END 3 */
@@ -368,8 +372,8 @@ static void MX_IWDG_Init(void)
   /* USER CODE END IWDG_Init 1 */
   hiwdg.Instance = IWDG;
   hiwdg.Init.Prescaler = IWDG_PRESCALER_32;
-  hiwdg.Init.Window = 1000;
-  hiwdg.Init.Reload = 1000;
+  hiwdg.Init.Window = 1024;
+  hiwdg.Init.Reload = 1024;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {
     Error_Handler();

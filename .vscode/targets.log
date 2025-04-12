@@ -6,7 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
+<<<<<<< HEAD
+# Make data base, printed on Sat Apr 12 22:35:43 2025
+=======
 # Make data base, printed on Sat Apr 12 09:35:18 2025
+>>>>>>> main
 
 # Variables
 
@@ -63,7 +67,11 @@ AS_DEFS =
 # environment
 LANG = C
 # environment
+<<<<<<< HEAD
+XAUTHORITY = /run/user/1000/xauth_WbEXtG
+=======
 XAUTHORITY = /run/user/1000/xauth_woURPB
+>>>>>>> main
 # default
 .LOADED := 
 # default
@@ -83,7 +91,11 @@ LDSCRIPT = STM32G031XX_FLASH.ld
 # environment
 VSCODE_L10N_BUNDLE_LOCATION = 
 # environment
+<<<<<<< HEAD
+ICEAUTHORITY = /run/user/1000/iceauth_VRApuF
+=======
 ICEAUTHORITY = /run/user/1000/iceauth_zotMRE
+>>>>>>> main
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -109,7 +121,11 @@ ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffuncti
 # automatic
 @F = $(notdir $@)
 # environment
+<<<<<<< HEAD
+VSCODE_PID = 2249
+=======
 VSCODE_PID = 1460401
+>>>>>>> main
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -119,7 +135,11 @@ AS_INCLUDES =
 # makefile (from 'Makefile', line 104)
 CP = $(PREFIX)objcopy
 # environment
+<<<<<<< HEAD
+SESSION_MANAGER = local/test:@/tmp/.ICE-unix/1214,unix/test:/tmp/.ICE-unix/1214
+=======
 SESSION_MANAGER = local/test:@/tmp/.ICE-unix/1470,unix/test:/tmp/.ICE-unix/1470
+>>>>>>> main
 # automatic
 *F = $(notdir $*)
 # environment
@@ -159,7 +179,11 @@ ASMM_SOURCES =
 # makefile (from 'Makefile', line 93)
 PREFIX = arm-none-eabi-
 # environment
+<<<<<<< HEAD
+INVOCATION_ID = a32fbcf4e7114238a160edbe8c8c8c80
+=======
 INVOCATION_ID = e156e3407d294d1d8523b2bd0ecc9e92
+>>>>>>> main
 # makefile (from 'Makefile', line 114)
 CPU = -mcpu=cortex-m0plus
 # automatic
@@ -193,7 +217,11 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
+<<<<<<< HEAD
+SYSTEMD_EXEC_PID = 1277
+=======
 SYSTEMD_EXEC_PID = 1531
+>>>>>>> main
 # environment
 DISPLAY = :1
 # environment
@@ -205,7 +233,11 @@ KDE_SESSION_UID = 1000
 # makefile (from 'Makefile', line 174)
 LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 # environment
+<<<<<<< HEAD
+MANAGERPID = 1029
+=======
 MANAGERPID = 1286
+>>>>>>> main
 # makefile (from 'Makefile', line 123)
 MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
 # environment
@@ -221,7 +253,11 @@ CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
+<<<<<<< HEAD
+JOURNAL_STREAM = 9:622
+=======
 JOURNAL_STREAM = 9:16624
+>>>>>>> main
 # environment
 XDG_SESSION_CLASS = user
 # makefile (from 'Makefile', line 32)
@@ -267,7 +303,11 @@ VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 QT_WAYLAND_RECONNECT = 1
 # variable set hash-table stats:
+<<<<<<< HEAD
+# Load=128/1024=12%, Rehash=0, Collisions=7/302=2%
+=======
 # Load=128/1024=12%, Rehash=0, Collisions=6/288=2%
+>>>>>>> main
 
 # Pattern-specific Variable Values
 
@@ -279,14 +319,24 @@ QT_WAYLAND_RECONNECT = 1
 # ./Modules/modbus (device 66306, inode 43259004): 9 files, no impossibilities.
 # Drivers/STM32G0xx_HAL_Driver/Src (device 66306, inode 43024257): 75 files, no impossibilities.
 # ./Modules/modbus/rtu (device 66306, inode 43259028): 6 files, no impossibilities.
+<<<<<<< HEAD
+ 
+# build (device 66306, inode 43026337): 134 files, no impossibilities.
+# . (device 66306, inode 42755318): 15 files, no impossibilities.
+=======
 # build (device 66306, inode 45784238): 134 files, no impossibilities.
 # . (device 66306, inode 42755318): 16 files, no impossibilities.
+>>>>>>> main
 # ./Modules/modbus/ascii (device 66306, inode 43259006): 4 files, no impossibilities.
 # Core/Src (device 66306, inode 42755328): 10 files, no impossibilities.
 # ./Modules/modbus/functions (device 66306, inode 43259020): 9 files, no impossibilities.
 # ./Modules/modbus/port (device 66306, inode 43259033): 8 files, no impossibilities.
 
+<<<<<<< HEAD
+# 199 files, no impossibilities in 10 directories.
+=======
 # 275 files, no impossibilities in 10 directories.
+>>>>>>> main
 
 # Implicit Rules
 
@@ -323,6 +373,12 @@ Core/Src/syscalls.c:
 #  File has been updated.
 #  Successfully updated.
 
+<<<<<<< HEAD
+build/mbfuncinput.o: Modules/modbus/functions/mbfuncinput.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+=======
 build/mbfuncinput.o: ./Modules/modbus/functions/mbfuncinput.c Makefile Modules/modbus/functions/mbfuncinput.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'mbfuncinput'
@@ -339,6 +395,14 @@ Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h:
 #  Last modified 2025-04-08 22:31:49.095834897
 #  File has been updated.
 #  Successfully updated.
+>>>>>>> main
+
+Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.727114266
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 Core/Src/stm32g0xx_it.c:
@@ -352,7 +416,11 @@ build/stm32g0xx_hal_flash_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_f
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'stm32g0xx_hal_flash_ex'
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:47:37.535924348
+=======
 #  Last modified 2025-04-08 22:32:26.183755525
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 193):
@@ -360,11 +428,17 @@ build/stm32g0xx_hal_flash_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_f
 
 # Not a target:
 Modules/modbus/functions/mbutils.c:
+<<<<<<< HEAD
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+=======
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
 #  Last modified 2024-09-14 19:36:50.55520944
 #  File has been updated.
 #  Successfully updated.
+>>>>>>> main
 
 Modules/modbus/include/mb.h:
 #  Implicit rule search has been done.
@@ -375,6 +449,11 @@ Modules/modbus/include/mb.h:
 
 # Not a target:
 Modules/modbus/tcp/mbtcp.c:
+<<<<<<< HEAD
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+=======
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
  
@@ -389,6 +468,7 @@ Modules/modbus/tcp/mbtcp.c:
 #  Last modified 2024-09-14 19:36:50.55520944
 #  File has been updated.
 #  Successfully updated.
+>>>>>>> main
 
 prog: build/STM32G0.elf
 #  Implicit rule search has not been done.
@@ -414,7 +494,11 @@ Modules/modbus/rtu/mbrtu.h:
 Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:33:09.603063322
+=======
 #  Last modified 2025-04-08 22:31:47.699837934
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
@@ -422,6 +506,259 @@ Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 build/mbfuncholding.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:47:40.279864319
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_tim_ex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.175888594
+#  File has been updated.
+#  Successfully updated.
+
+Core/Inc/stm32g0xx_it.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:08.539
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_pwr_ex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.859917319
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_uart_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_uart_ex'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.835874103
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+Modules/modbus/port/portserial.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-15 11:16:29.030393452
+#  File has been updated.
+#  Successfully updated.
+
+Modules/modbus/port/mt_port.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 17:54:11.127641118
+#  File has been updated.
+#  Successfully updated.
+
+build/mbutils.o: Modules/modbus/functions/mbutils.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbproto.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.539060421
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.527059877
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56306151
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.551060966
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_iwdg.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_iwdg.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_dma.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_dma'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.687921051
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+./Modules/modbus/port/porttimer.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-15 12:53:39.840458054
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_rcc_ex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.355928253
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+./Modules/modbus/mb.c:
+#  Implicit rule search has been done.
+ 
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+build/STM32G0.elf: build/main.o build/stm32g0xx_it.o build/stm32g0xx_hal_msp.o build/stm32g0xx_hal_i2c.o build/stm32g0xx_hal_i2c_ex.o build/stm32g0xx_hal_rcc.o build/stm32g0xx_hal_rcc_ex.o build/stm32g0xx_ll_rcc.o build/stm32g0xx_hal_flash.o build/stm32g0xx_hal_flash_ex.o build/stm32g0xx_hal_gpio.o build/stm32g0xx_hal_dma.o build/stm32g0xx_hal_dma_ex.o build/stm32g0xx_hal_pwr.o build/stm32g0xx_hal_pwr_ex.o build/stm32g0xx_hal_cortex.o build/stm32g0xx_hal.o build/stm32g0xx_hal_exti.o build/stm32g0xx_hal_tim.o build/stm32g0xx_hal_tim_ex.o build/stm32g0xx_hal_uart.o build/stm32g0xx_hal_uart_ex.o build/system_stm32g0xx.o build/sysmem.o build/syscalls.o build/mb.o build/mbascii.o build/porttimer.o build/portevent.o build/portserial.o build/mt_port.o build/mbtcp.o build/mbfunccoils.o build/mbfuncinput.o build/mbfuncholding.o build/mbfuncdisc.o build/mbfuncdiag.o build/mbfuncother.o build/mbutils.o build/mbrtu.o build/mbcrc.o build/stm32g0xx_hal_iwdg.o build/startup_stm32g031xx.o Makefile
+#  Implicit rule search has not been done.
+#  Last modified 2025-04-12 22:14:57.341547008
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/14=0%
+#  recipe to execute (from 'Makefile', line 201):
+	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	$(SZ) $@
+
+build/mb.o: ./Modules/modbus/mb.c Makefile Modules/modbus/mb.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbfunc.h Modules/modbus/include/mbport.h Modules/modbus/rtu/mbrtu.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'mb'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.987870766
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+build/mbfuncother.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.347862818
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_uart.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.507881305
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_iwdg.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.559061328
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/system_stm32g0xx.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 18:33:06.842427874
+#  File has been updated.
+#  Successfully updated.
+
+build/mbascii.o: ./Modules/modbus/ascii/mbascii.c Makefile Modules/modbus/ascii/mbascii.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h Modules/modbus/ascii/mbascii.h Modules/modbus/include/mbframe.h Modules/modbus/rtu/mbcrc.h Modules/modbus/include/mbport.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'mbascii'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.011870238
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+build/mbtcp.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.191866263
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mbrtu.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.423861139
+#  File has been updated.
+#  Successfully updated.
+
+build/mbfuncdisc.o: Modules/modbus/functions/mbfuncdisc.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.559061328
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.339096681
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_i2c.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_i2c'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.139932939
+=======
 #  Last modified 2025-04-08 22:32:30.851745707
 #  File has been updated.
 #  Successfully updated.
@@ -454,10 +791,128 @@ build/stm32g0xx_hal_uart_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_ua
 #  Implicit/static pattern stem: 'stm32g0xx_hal_uart_ex'
 #  File is secondary (prerequisite of .SECONDARY).
 #  Last modified 2025-04-08 22:32:30.143747194
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 193):
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+<<<<<<< HEAD
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56306151
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56306151
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/porttimer.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.051869355
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/stm32g0xx_hal_msp.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:08.691
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_tim_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_tim_ex'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.299885871
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+./Modules/modbus/port/portevent.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-15 11:15:06.039498217
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/system_stm32g0xx.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.879873137
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.727114266
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mbfuncdisc.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.307863701
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_flash_ex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.515924782
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/port/mt_port.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 22:35:42.685404645
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.571061872
+#  File has been updated.
+#  Successfully updated.
+
+build/mbfuncholding.o: Modules/modbus/functions/mbfuncholding.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/portevent.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.075868825
+=======
 
 # Not a target:
 ./Modules/modbus/functions/mbfuncother.c:
@@ -829,6 +1284,7 @@ build/portevent.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
 #  Last modified 2025-04-08 22:32:30.527746388
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
@@ -836,7 +1292,11 @@ build/syscalls.o: Core/Src/syscalls.c Makefile Core/Src/syscalls.c | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'syscalls'
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:47:39.947871644
+=======
 #  Last modified 2025-04-08 22:32:30.315746833
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 193):
@@ -845,7 +1305,11 @@ build/syscalls.o: Core/Src/syscalls.c Makefile Core/Src/syscalls.c | build
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:33:09.539060421
+=======
 #  Last modified 2025-04-08 22:31:47.575838204
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
@@ -858,6 +1322,7 @@ Modules/modbus/port/port.h:
 
 clean:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 217):
@@ -867,11 +1332,310 @@ build/stm32g0xx_hal_rcc_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'stm32g0xx_hal_rcc_ex'
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:47:37.367927993
+=======
 #  Last modified 2025-04-08 22:32:25.899756122
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 193):
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+<<<<<<< HEAD
+
+# Not a target:
+Modules/modbus/port/porttimer.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-15 12:53:39.840458054
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_pwr.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_pwr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.791918795
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+Modules/modbus/mb.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+build/portevent.o: ./Modules/modbus/port/portevent.c Makefile Modules/modbus/port/portevent.c Modules/modbus/include/mb.h Modules/modbus/port/port.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbport.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'portevent'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.079868736
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+Drivers/CMSIS/Include/core_cm0plus.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.73911481
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_pwr_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_pwr_ex'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.871917059
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+build/stm32g0xx_hal_pwr.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.783918968
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.547060784
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_dma_ex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.735920009
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+./Modules/modbus/port/mt_port.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 22:35:42.685404645
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56306151
+#  File has been updated.
+#  Successfully updated.
+
+Modules/modbus/rtu/mbcrc.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/CMSIS/Include/cmsis_compiler.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.73911481
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mbfuncdiag.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.323863347
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.559061328
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/functions/mbfunccoils.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/functions/mbfuncother.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.515059333
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/portserial.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.123867764
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_cortex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_cortex'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.939915584
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+Modules/modbus/include/mbport.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mbutils.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.37986211
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.539060421
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56306151
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mt_port.d:
+ 
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.171866704
+#  File has been updated.
+#  Successfully updated.
+
+Core/Inc/stm32g0xx_hal_conf.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-10-12 16:54:29.458
+#  File has been updated.
+#  Successfully updated.
+
+Modules/modbus/include/mbfunc.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56306151
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_msp.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:36.291951242
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_cortex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.927915844
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_i2c_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_i2c_ex'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.195931725
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+Modules/modbus/include/mbframe.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+build/mbfuncother.o: Modules/modbus/functions/mbfuncother.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32g0xx_hal_gpio.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.58792322
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.53506024
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_i2c.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:36.583944946
+=======
 
 # Not a target:
 Modules/modbus/port/porttimer.c:
@@ -977,6 +1741,7 @@ Modules/modbus/rtu/mbcrc.h:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
 #  Last modified 2024-09-14 19:36:50.55520944
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
@@ -1220,6 +1985,27 @@ Modules/modbus/port/portevent.c:
 #  File has been updated.
 #  Successfully updated.
 
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/rtu/mbcrc.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Modules/modbus/port/portevent.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-15 11:15:06.039498217
+#  File has been updated.
+#  Successfully updated.
+
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
@@ -1230,9 +2016,16 @@ build/stm32g0xx_hal_gpio.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'stm32g0xx_hal_gpio'
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:47:37.595923047
+#  File has been updated.
+#  Successfully updated.
+ 
+=======
 #  Last modified 2025-04-08 22:32:26.283755313
 #  File has been updated.
 #  Successfully updated.
+>>>>>>> main
 #  recipe to execute (from 'Makefile', line 193):
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 
@@ -1255,7 +2048,11 @@ build/portserial.o: ./Modules/modbus/port/portserial.c Makefile Modules/modbus/p
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'portserial'
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:47:40.127867676
+=======
 #  Last modified 2025-04-08 22:32:30.611746211
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 193):
@@ -1265,7 +2062,11 @@ build/portserial.o: ./Modules/modbus/port/portserial.c Makefile Modules/modbus/p
 Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:33:09.555061146
+=======
 #  Last modified 2025-04-08 22:31:47.6238381
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
@@ -1273,7 +2074,11 @@ Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c:
 build/stm32g0xx_hal_exti.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
+<<<<<<< HEAD
+#  Last modified 2025-04-12 21:47:38.05591306
+=======
 #  Last modified 2025-04-08 22:32:27.051753696
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
@@ -1282,6 +2087,538 @@ all: build/STM32G0.elf build/STM32G0.hex build/STM32G0.bin
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
+<<<<<<< HEAD
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/14=0%
+
+# Not a target:
+Modules/modbus/functions/mbfuncdisc.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.53506024
+#  File has been updated.
+#  Successfully updated.
+
+build/sysmem.o: Core/Src/sysmem.c Makefile Core/Src/sysmem.c | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sysmem'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.907872522
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+build/stm32g0xx_hal_tim.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:38.371906164
+#  File has been updated.
+#  Successfully updated.
+
+build:
+#  Implicit rule search has not been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 22:14:57.349546684
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 211):
+	mkdir $@		
+
+Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.727114266
+#  File has been updated.
+#  Successfully updated.
+
+ 
+build/stm32g0xx_it.o: Core/Src/stm32g0xx_it.c Makefile Core/Src/stm32g0xx_it.c Core/Inc/main.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h Core/Inc/stm32g0xx_it.h Modules/modbus/port/port.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_it'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:36.243952277
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56306151
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/CMSIS/Include/mpu_armv7.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.743114991
+#  File has been updated.
+#  Successfully updated.
+
+build/porttimer.o: ./Modules/modbus/port/porttimer.c Makefile Modules/modbus/port/porttimer.c Modules/modbus/port/port.h Core/Inc/main.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h Modules/modbus/include/mb.h Modules/modbus/port/port.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbport.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'porttimer'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.059869178
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+build/mbfuncdiag.o: Modules/modbus/functions/mbfuncdiag.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/main.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 22:14:57.289549113
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_exti.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_exti'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:38.067912799
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+build/stm32g0xx_hal_rcc.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.271930075
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/rtu/mbrtu.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32g0xx_hal.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:38.007914108
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+build/mb.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.979870942
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+ 
+#  Last modified 2025-04-12 21:33:09.53506024
+#  File has been updated.
+#  Successfully updated.
+
+Modules/modbus/include/mbproto.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/functions/mbfuncinput.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32g0xx_hal_flash.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.439926431
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/startup_stm32g031xx.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.507859284
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_ll_rcc.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_ll_rcc'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.379927733
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+build/stm32g0xx_hal_dma.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.659921658
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mbfuncinput.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.247865026
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.559061328
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.547060784
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mbascii.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.007870327
+#  File has been updated.
+#  Successfully updated.
+
+build/startup_stm32g031xx.o: startup_stm32g031xx.s
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Modules/modbus/functions/mbfuncdiag.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+
+# Not a target:
+build/stm32g0xx_ll_rcc.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.379927733
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/main.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 22:14:48.689896454
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/STM32G0.hex:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32g0xx_it.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:36.23595245
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_tim.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_tim'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.023891931
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.539060421
+#  File has been updated.
+#  Successfully updated.
+
+Modules/modbus/tcp/mbtcp.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56706169
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.555061146
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/mbcrc.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.443860698
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.559061328
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Core/Src/sysmem.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 18:33:06.842427874
+#  File has been updated.
+#  Successfully updated.
+
+Modules/modbus/include/mbconfig.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-15 00:30:42.920076833
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/ascii/mbascii.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+./Modules/modbus/ascii/mbascii.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2024-09-14 19:36:50.55520944
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_i2c_ex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.191931811
+#  File has been updated.
+#  Successfully updated.
+
+build/mbrtu.o: Modules/modbus/rtu/mbrtu.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/rtu/mbrtu.h Modules/modbus/include/mbframe.h Modules/modbus/rtu/mbcrc.h Modules/modbus/include/mbport.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Drivers/CMSIS/Include/cmsis_gcc.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.73911481
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.539060421
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.543060603
+#  File has been updated.
+#  Successfully updated.
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.53506024
+#  File has been updated.
+#  Successfully updated.
+
+build/mbtcp.o: Modules/modbus/tcp/mbtcp.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h Modules/modbus/tcp/mbtcp.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbport.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/mbcrc.o: Modules/modbus/rtu/mbcrc.c Modules/modbus/port/port.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/sysmem.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.90387261
+#  File has been updated.
+#  Successfully updated.
+
+ 
+build/stm32g0xx_hal_uart.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_uart'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.735876299
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+build/stm32g0xx_hal_flash.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_flash'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.447926257
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+build/stm32g0xx_hal_dma_ex.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_dma_ex'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.739919922
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.53506024
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/syscalls.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.93987182
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Modules/modbus/functions/mbfuncholding.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/stm32g0xx_hal.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.995914369
+#  File has been updated.
+#  Successfully updated.
+
+build/main.o: Core/Src/main.c Makefile Core/Src/main.c Core/Inc/main.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h Modules/modbus/include/mb.h Modules/modbus/port/port.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 22:14:57.309548304
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.531060059
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.559061328
+#  File has been updated.
+#  Successfully updated.
+
+build/mt_port.o: ./Modules/modbus/port/mt_port.c Makefile Modules/modbus/port/mt_port.c Modules/modbus/port/mt_port.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'mt_port'
+#  Last modified 2025-04-12 21:47:40.175866616
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := build/mt_port.o
+# automatic
+# * := mt_port
+# automatic
+# < := ./Modules/modbus/port/mt_port.c
+# automatic
+# + := ./Modules/modbus/port/mt_port.c Makefile Modules/modbus/port/mt_port.c Modules/modbus/port/mt_port.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h
+# automatic
+# % := 
+# automatic
+# ^ := ./Modules/modbus/port/mt_port.c Makefile Modules/modbus/port/mt_port.c Modules/modbus/port/mt_port.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h
+# automatic
+# ? := ./Modules/modbus/port/mt_port.c Modules/modbus/port/mt_port.c
+# automatic
+# | := build
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=4/26=15%
+=======
 #  Successfully updated.
 
 # Not a target:
@@ -1306,10 +2643,89 @@ build/sysmem.o: Core/Src/sysmem.c Makefile Core/Src/sysmem.c | build
 #  Last modified 2025-04-08 22:32:30.247746975
 #  File has been updated.
 #  Successfully updated.
+>>>>>>> main
 #  recipe to execute (from 'Makefile', line 193):
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 
 # Not a target:
+<<<<<<< HEAD
+build/mbfunccoils.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.223865556
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+startup_stm32g031xx.s:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/stm32g0xx_hal_msp.o: Core/Src/stm32g0xx_hal_msp.c Makefile Core/Src/stm32g0xx_hal_msp.c Core/Inc/main.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_msp'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:36.29995107
+ 
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+build/system_stm32g0xx.o: Core/Src/system_stm32g0xx.c Makefile Core/Src/system_stm32g0xx.c Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'system_stm32g0xx'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.88387305
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+Drivers/CMSIS/Include/cmsis_version.h:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:10.73911481
+#  File has been updated.
+#  Successfully updated.
+
+build/stm32g0xx_hal_rcc.o: Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c Makefile Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h Core/Inc/stm32g0xx_hal_conf.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g031xx.h Drivers/CMSIS/Include/core_cm0plus.h Drivers/CMSIS/Include/cmsis_version.h Drivers/CMSIS/Include/cmsis_compiler.h Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/mpu_armv7.h Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dmamux.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_iwdg.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h | build
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'stm32g0xx_hal_rcc'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:37.291929641
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 193):
+	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
+
+# Not a target:
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.56706169
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_uart_ex.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:39.81187463
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/stm32g0xx_hal_iwdg.d:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:47:40.495859549
+#  File has been updated.
+#  Successfully updated.
+
+build/mbfunccoils.o: Modules/modbus/functions/mbfunccoils.c Modules/modbus/port/port.h Modules/modbus/include/mb.h Modules/modbus/include/mbport.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbframe.h Modules/modbus/include/mbproto.h Modules/modbus/include/mbconfig.h
+=======
 build/stm32g0xx_hal_tim.d:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
@@ -1318,6 +2734,7 @@ build/stm32g0xx_hal_tim.d:
 #  Successfully updated.
 
 build:
+>>>>>>> main
 #  Implicit rule search has not been done.
 #  File is secondary (prerequisite of .SECONDARY).
 #  Last modified 2025-04-10 23:29:36.176889204
@@ -1344,6 +2761,12 @@ build/stm32g0xx_it.o: Core/Src/stm32g0xx_it.c Makefile Core/Src/stm32g0xx_it.c C
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 
 # Not a target:
+<<<<<<< HEAD
+Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-04-12 21:33:09.571061872
+=======
 Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
@@ -1977,11 +3400,16 @@ Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
 #  Last modified 2025-04-08 22:31:47.643838056
+>>>>>>> main
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
+<<<<<<< HEAD
+# Load=193/1024=19%, Rehash=0, Collisions=498/3151=16%
+=======
 # Load=203/1024=20%, Rehash=0, Collisions=559/3402=16%
+>>>>>>> main
 # VPATH Search Paths
 
 vpath %.c ./Modules/modbus:./Modules/modbus/ascii:./Modules/modbus/functions:./Modules/modbus/port:./Modules/modbus/rtu:./Modules/modbus/tcp:Core/Src:Drivers/STM32G0xx_HAL_Driver/Src
@@ -1990,6 +3418,17 @@ vpath %.c ./Modules/modbus:./Modules/modbus/ascii:./Modules/modbus/functions:./M
 
 # No general ('VPATH' variable) search path.
 
+<<<<<<< HEAD
+# strcache buffers: 2 (0) / strings = 440 / storage = 10039 B / avg = 22 B
+# current buf: size = 8162 B / used = 1905 B / count = 104 / avg = 18 B
+# other used: total = 8134 B / count = 336 / avg = 24 B
+# other free: total = 28 B / max = 28 B / min = 28 B / avg = 28 B
+
+# strcache performance: lookups = 3759 / hit rate = 88%
+# hash-table stats:
+# Load=440/8192=5%, Rehash=0, Collisions=303/3759=8%
+# Finished Make data base on Sat Apr 12 22:35:43 2025
+=======
 # strcache buffers: 2 (1) / strings = 519 / storage = 11791 B / avg = 22 B
 # current buf: size = 8162 B / used = 3651 B / count = 182 / avg = 20 B
 # other used: total = 8140 B / count = 337 / avg = 24 B
@@ -1999,5 +3438,6 @@ vpath %.c ./Modules/modbus:./Modules/modbus/ascii:./Modules/modbus/functions:./M
 # hash-table stats:
 # Load=519/8192=6%, Rehash=0, Collisions=317/3955=8%
 # Finished Make data base on Sat Apr 12 09:35:18 2025
+>>>>>>> main
 
  

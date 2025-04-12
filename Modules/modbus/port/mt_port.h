@@ -11,6 +11,6 @@
 #include "stm32g0xx_hal.h"
 /* Declarations and definitions ----------------------------------------------*/
 /* Functions -----------------------------------------------------------------*/
-extern void MT_PORT_SetTimerModule(TIM_HandleTypeDef* timer);
-extern void MT_PORT_SetUartModule(UART_HandleTypeDef* uart);
+void MT_PORT_SetTimerModule(TIM_HandleTypeDef* timer);
+void MT_PORT_SetUartModule(UART_HandleTypeDef* uart);
 #endif // #ifndef MT_PORT_H
