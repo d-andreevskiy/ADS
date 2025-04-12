@@ -18,10 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "config.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "mb.h"
+#include "mt_port.h"
+#include "string.h"
 
 /* USER CODE END Includes */
 
@@ -93,9 +95,6 @@ static void MX_I2C2_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_TIM14_Init(void);
 static void MX_IWDG_Init(void);
-
-extern void MT_PORT_SetTimerModule(TIM_HandleTypeDef* timer);
-extern void MT_PORT_SetUartModule(UART_HandleTypeDef* uart);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -119,10 +118,9 @@ void __critical_exit(void)
 }
 
 typedef enum  {
-  SEND_CONFIG,
+  SEND_CONFIG = 0,
   WAIT_MEAS, 
   SWITCH_REG,
-  READ_MEAS
 } state_t;
 
 uint8_t ai_arr[4] = {AI0, AI1, AI2, AI3}; 
@@ -143,7 +141,7 @@ void readI2CRegs()
       for (int i = 0; i < 2; i++) {
         if (ai == 0) {
           HAL_I2C_Master_Transmit(&hi2c2, (i2c_1110[i] << 1), writeBuf_110, 2,  I2C_TIMEOUT);
-          HAL_Delay(10);
+          HAL_Delay(1);
         }
 
         #ifndef WITHOUT_115
@@ -151,7 +149,7 @@ void readI2CRegs()
           usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << i;
         else
           usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << i);
-        HAL_Delay(10);
+        HAL_Delay(1);
         #endif
       }
 
@@ -261,8 +259,8 @@ int main(void)
     readI2CRegs();
     usRegInputBuf[REG_INPUT_NREGS - 2] =  HAL_GetTick() / 1000;
     usRegInputBuf[REG_INPUT_NREGS - 1] =  HAL_GetTick();
-    if (eMBPoll() == MB_ENOERR)
-      HAL_IWDG_Refresh(&hiwdg);
+    HAL_IWDG_Refresh(&hiwdg);
+    eMBPoll();
 
   }
   /* USER CODE END 3 */
@@ -373,7 +371,7 @@ static void MX_IWDG_Init(void)
 
   /* USER CODE END IWDG_Init 1 */
   hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_32;
   hiwdg.Init.Window = 1024;
   hiwdg.Init.Reload = 1024;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
@@ -473,8 +471,8 @@ static void MX_USART1_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -490,8 +488,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(TEST_GPIO_Port, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
