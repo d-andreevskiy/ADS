@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "config.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "mb.h"
@@ -93,6 +93,9 @@ static void MX_I2C2_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_TIM14_Init(void);
 static void MX_IWDG_Init(void);
+
+extern void MT_PORT_SetTimerModule(TIM_HandleTypeDef* timer);
+extern void MT_PORT_SetUartModule(UART_HandleTypeDef* uart);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -138,42 +141,52 @@ void readI2CRegs()
     case SEND_CONFIG:
 
       for (int i = 0; i < 2; i++) {
-        if (ai == 0)
-          HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[i] << 1), writeBuf_110, 2,  I2C_TIMEOUT);
-        HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 3,  I2C_TIMEOUT);
+        if (ai == 0) {
+          HAL_I2C_Master_Transmit(&hi2c2, (i2c_1110[i] << 1), writeBuf_110, 2,  I2C_TIMEOUT);
+          HAL_Delay(10);
+        }
+
+        #ifndef WITHOUT_115
+        if (HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 3,  I2C_TIMEOUT) == HAL_OK) 
+          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << i;
+        else
+          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << i);
+        HAL_Delay(10);
+        #endif
       }
 
       state++;
       break;
 
     case WAIT_MEAS:
-      for (int i = 0; i < 2; i++) {
-        do{
-          HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), writeBuf, 2,  I2C_TIMEOUT);
-        } while ((writeBuf[0] & 0x80) == 0);
-      }
+      if (ai < 4 ) {
+        #ifndef WITHOUT_115
+        for (int i = 0; i < 2; i++) {
+          if (usRegInputBuf[REG_INPUT_NREGS - 3] & (1 << i)) 
+            do{
+              HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), writeBuf, 2,  I2C_TIMEOUT);
+            } while ((writeBuf[0] & 0x80) == 0);
+        }
 
-      writeBuf[0] = 0;
-      for (int i = 0; i < 2; i++)
-      HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
+        writeBuf[0] = 0;
+        for (int i = 0; i < 2; i++)
+          if (usRegInputBuf[REG_INPUT_NREGS - 3] & (1 << i)) 
+            HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
 
-      for (int i=0; i < 2; i++)
-        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), usRegInputBuf + i*4 + ai, 2,  I2C_TIMEOUT) == HAL_OK)
-          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << i;
-        else
-          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << i);
-
-      state = SEND_CONFIG;
-      ai ++;
-      if (ai > 3) {
+        for (int i=0; i < 2; i++)
+          if (usRegInputBuf[REG_INPUT_NREGS - 3] & (1 << i)) 
+            HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1),(uint8_t *) ( usRegInputBuf + i*4 + ai), 2,  I2C_TIMEOUT);
+        #endif
+        state = SEND_CONFIG;
+        ai ++; 
+      } else {
         ai = 0;
-        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[0] << 1), usRegInputBuf + 8, 2,  I2C_TIMEOUT) == HAL_OK)
-          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << 2;
-        else
-          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << 3);
-
-        HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[1] << 1), usRegInputBuf + 9, 2,  I2C_TIMEOUT);
-
+        for (uint8_t i =0; i < 2; i++) {
+          if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[i] << 1), (uint8_t *)(usRegInputBuf + 8 + i), 2,  I2C_TIMEOUT) == HAL_OK)
+            usRegInputBuf[REG_INPUT_NREGS - 3] |= (1 << (i + 2));
+          else
+            usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << (i +2));
+        }
       }
     }
 
@@ -223,17 +236,17 @@ int main(void)
 
   uint8_t X = 0;
   
-MT_PORT_SetTimerModule(&htim14);
-MT_PORT_SetUartModule(&huart1);
-eMBErrorCode eStatus;
-eStatus = eMBInit(MB_RTU, 1, 0, 115200, MB_PAR_NONE);
-eStatus = eMBEnable();
-memset (&usRegInputBuf,0, sizeof(usRegInputBuf));
-if (eStatus != MB_ENOERR)
-{
-// Error handling
-  
-}
+  MT_PORT_SetTimerModule(&htim14);
+  MT_PORT_SetUartModule(&huart1);
+  eMBErrorCode eStatus;
+  eStatus = eMBInit(MB_RTU, 1, 0, 115200, MB_PAR_NONE);
+  eStatus = eMBEnable();
+  // memset (&usRegInputBuf,0, sizeof(usRegInputBuf));
+  if (eStatus != MB_ENOERR)
+  {
+  // Error handling
+    
+  }
 
   /* USER CODE END 2 */
 

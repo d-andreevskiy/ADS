@@ -13,6 +13,7 @@
         "port.h": "c",
         "mbconfig.h": "c",
         "mbport.h": "c",
-        "mbproto.h": "c"
+        "mbproto.h": "c",
+        "config.h": "c"
     }
 }
