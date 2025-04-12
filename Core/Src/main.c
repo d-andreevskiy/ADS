@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "mb.h"
+#include "mt_port.h"
+#include "string.h"
 
 /* USER CODE END Includes */
 
@@ -116,10 +118,9 @@ void __critical_exit(void)
 }
 
 typedef enum  {
-  SEND_CONFIG,
+  SEND_CONFIG = 0,
   WAIT_MEAS, 
   SWITCH_REG,
-  READ_MEAS
 } state_t;
 
 uint8_t ai_arr[4] = {AI0, AI1, AI2, AI3}; 
@@ -138,9 +139,12 @@ void readI2CRegs()
     case SEND_CONFIG:
 
       for (int i = 0; i < 2; i++) {
-        if (ai == 0)
+        if (ai == 0) {
           HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[i] << 1), writeBuf_110, 2,  I2C_TIMEOUT);
+          HAL_IWDG_Refresh(&hiwdg);
+        }
         HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 3,  I2C_TIMEOUT);
+        HAL_IWDG_Refresh(&hiwdg);
       }
 
       state++;
@@ -149,16 +153,17 @@ void readI2CRegs()
     case WAIT_MEAS:
       for (int i = 0; i < 2; i++) {
         do{
-          HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), writeBuf, 2,  I2C_TIMEOUT);
+          if ( HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), writeBuf, 2,  I2C_TIMEOUT) != HAL_OK)
+            break;
         } while ((writeBuf[0] & 0x80) == 0);
       }
 
       writeBuf[0] = 0;
       for (int i = 0; i < 2; i++)
-      HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
+        HAL_I2C_Master_Transmit(&hi2c2, (i2c_1115[i] << 1), writeBuf, 1,  I2C_TIMEOUT);
 
-      for (int i=0; i < 2; i++)
-        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), usRegInputBuf + i*4 + ai, 2,  I2C_TIMEOUT) == HAL_OK)
+      for (uint8_t i=0; i < 2; i++)
+        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1115[i] << 1), (uint8_t*)(usRegInputBuf + i*4 + ai), 2,  I2C_TIMEOUT) == HAL_OK)
           usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << i;
         else
           usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << i);
@@ -167,12 +172,15 @@ void readI2CRegs()
       ai ++;
       if (ai > 3) {
         ai = 0;
-        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[0] << 1), usRegInputBuf + 8, 2,  I2C_TIMEOUT) == HAL_OK)
+        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[0] << 1), (uint8_t*)(usRegInputBuf + 8), 2,  I2C_TIMEOUT) == HAL_OK)
           usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << 2;
         else
-          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << 3);
+          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << 2);
 
-        HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[1] << 1), usRegInputBuf + 9, 2,  I2C_TIMEOUT);
+        if (HAL_I2C_Master_Receive(&hi2c2, (i2c_1110[1] << 1), (uint8_t*)(usRegInputBuf + 9), 2,  I2C_TIMEOUT) == HAL_OK)
+          usRegInputBuf[REG_INPUT_NREGS - 3] |= 1 << 2;
+        else
+          usRegInputBuf[REG_INPUT_NREGS - 3] &= ~(1 << 2);
 
       }
     }
@@ -248,8 +256,7 @@ if (eStatus != MB_ENOERR)
     readI2CRegs();
     usRegInputBuf[REG_INPUT_NREGS - 2] =  HAL_GetTick() / 1000;
     usRegInputBuf[REG_INPUT_NREGS - 1] =  HAL_GetTick();
-    if (eMBPoll() == MB_ENOERR)
-      HAL_IWDG_Refresh(&hiwdg);
+    HAL_IWDG_Refresh(&hiwdg);
 
   }
   /* USER CODE END 3 */
@@ -360,9 +367,9 @@ static void MX_IWDG_Init(void)
 
   /* USER CODE END IWDG_Init 1 */
   hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
-  hiwdg.Init.Window = 1024;
-  hiwdg.Init.Reload = 1024;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_32;
+  hiwdg.Init.Window = 1000;
+  hiwdg.Init.Reload = 1000;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {
     Error_Handler();
@@ -460,8 +467,8 @@ static void MX_USART1_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -477,8 +484,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(TEST_GPIO_Port, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
